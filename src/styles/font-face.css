@@ -1,0 +1,32 @@
+@font-face {
+font-family: 'Amatic SC';
+src: url('../fonts/AmaticSC-Regular.ttf');
+font-weight: 300;
+font-style: normal;
+font-stretch: normal;
+}
+
+@font-face {
+font-family: 'Amatic SC Bold';
+src: url('../fonts/AmaticSC-Bold.ttf');
+font-weight: 400;
+font-style: normal;
+font-stretch: normal;
+}
+
+@font-face {
+font-family: 'Josefin Slab';
+src: url('../fonts/JosefinSlab-Regular.ttf');
+font-weight: 300;
+font-style: normal;
+font-stretch: normal;
+}
+
+
+@font-face {
+font-family: 'Josefin Slab Bold';
+src: url('../fonts/JosefinSlab-Bold.ttf');
+font-weight: 400;
+font-style: normal;
+font-stretch: normal;
+}

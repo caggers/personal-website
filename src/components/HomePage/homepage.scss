@@ -1,0 +1,82 @@
+@import '../../styles/font-face.css';
+
+$app-purple: #B721FF;
+$app-light-blue: #21D4FD;
+$app-dark-blue: #6A86FE;
+$background-color: #21D4FD;
+$background-image: linear-gradient(30deg, #21D4FD 0%, #B721FF 100%);
+
+$app-white: #ffffff;
+$app-black: #000000;
+$app-grey: #979797;
+
+$app-header-text: 5rem;
+$section-header-text: 2rem;
+$app-primary-text: 'Amatic SC';
+$app-secondary-bold-text: 'Josefin Slab Bold';
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  .col-5 {
+    width: 5%;
+    margin: auto 0;
+  }
+  .col-30 {
+    width: 30%;
+    margin: 0 5% 0 0;
+  }
+  .col-30-img {
+    width: 30%;
+  }
+  .col-70 {
+    width: 70%;
+    margin: auto 0;
+  }
+  .col-80 {
+    width: 80%;
+    margin: auto 0;
+  }
+  .col-95 {
+    width: 95%;
+    margin: auto 0;
+  }
+  .col-100 {
+    width: 100%;
+    margin: auto 0;
+  }
+}
+
+header.header-text {
+  font: $app-header-text $app-primary-text, Arial, Verdana, sans-serif;
+  text-align: center;
+  background: $background-image;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 13rem 0
+}
+
+img.profile-img {
+  width: 150px;
+  height: 150px;
+}
+
+.section {
+  width: 100%;
+  .sectionTitleContainer {
+    h1.sectionTitle {
+      font: $section-header-text $app-primary-text, Arial, Verdana, sans-serif;
+      width: 100%;
+      &:after {
+        content:' ';
+        display:block;
+        border-bottom: 1px solid $app-grey;
+      }
+    }
+  }
+  .list-item-heading {
+    font-family: $app-secondary-bold-text;
+  }
+
+}
