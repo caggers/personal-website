@@ -1,10 +1,105 @@
 @import './font-face.css';
+@import './variables.scss';
 
 html {
   font: 14px/20px "Josefin Slab", Arial, Verdana, sans-serif;
 }
 
 body {
-  max-width: 700px;
+  max-width: 850px;
   margin: auto;
+}
+
+// Grid Styles
+
+.row {
+  display: flex;
+  flex-direction: row;
+  .col-5 {
+    width: 5%;
+    margin: auto 0;
+  }
+  .col-10 {
+    width: 10%;
+    margin: auto 0;
+  }
+  .col-30 {
+    width: 30%;
+  }
+  .col-70 {
+    width: 70%;
+    margin: auto 0;
+  }
+  .col-80 {
+    width: 80%;
+    margin: auto 0;
+  }
+  .col-90 {
+    width: 90%;
+    margin: auto 0;
+  }
+  .col-95 {
+    width: 95%;
+    margin: auto 0;
+  }
+  .col-100 {
+    width: 100%;
+    margin: auto 0;
+  }
+}
+.row-progress {
+  @extend .row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  progress {
+    background-color: $app-white;
+    border: $progress-bar-border;
+    height: $progress-bar-height;
+    border-radius: $progress-bar-border-radius;
+  }
+  progress::-webkit-progress-bar {
+    background-color: $app-white;
+    border-radius: $progress-bar-border-radius;
+    height: $progress-bar-height;
+  }
+  progress::-webkit-progress-value {
+    background-color:  $app-dark-blue;
+    border-radius: $progress-bar-border-radius;
+    height: $progress-bar-height;
+  }
+  progress::-moz-progress-bar {
+    background-color:  $app-dark-blue;
+    border-radius: $progress-bar-border-radius;
+    height: $progress-bar-height;
+  }
+}
+
+.row-skills {
+  @extend .row;
+  justify-content: space-between;
+  ul {
+    -webkit-margin-before: 0;
+    list-style-type: none;
+    text-align: center;
+  }
+}
+// Global Section components
+
+.section {
+  width: 100%;
+  .sectionTitleContainer {
+    h1.sectionTitle {
+      font: $section-header-text $app-primary-text, Arial, Verdana, sans-serif;
+      width: 100%;
+      &:after {
+        content:' ';
+        display:block;
+        border-bottom: 1px solid $app-grey;
+      }
+    }
+  }
+  .list-item-heading {
+    font-family: $app-secondary-bold-text;
+  }
 }

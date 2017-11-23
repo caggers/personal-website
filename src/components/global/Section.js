@@ -6,12 +6,11 @@ import SectionListItem from './SectionListItem';
 export default class Section extends Component {
 
     render() {
-        const {title, icon, text, isListing} = this.props;
-        console.log(text);
+        const {title, icon, text, isListing, fullSize} = this.props;
         if(!isListing) {
             return (
               <div className="section">
-                  <SectionHeader title={title} icon={icon}/>
+                  <SectionHeader title={title} icon={icon} fullSize={fullSize}/>
                   <div className="row">
                       <div className="col-5"/>
                       <div className="col-95">
@@ -23,7 +22,7 @@ export default class Section extends Component {
         }
         return (
           <div className="section">
-              <SectionHeader title={title} icon={icon}/>
+              <SectionHeader title={title} icon={icon} fullSize={fullSize}/>
               <div className="row">
                   <div className="col-100">
                       {text.map((item) =>
@@ -43,5 +42,6 @@ Section.propTypes = {
         PropTypes.string,
         PropTypes.array
     ]),
-    isListing: PropTypes.bool
+    isListing: PropTypes.bool,
+    fullSize: PropTypes.bool
 };

@@ -1,6 +1,6 @@
-import { spaceman, telescope, rocket } from '../images/icon/index';
+import { spaceman, telescope, rocket, twinkle, halfmoon, ufo } from '../images/icon/index';
 
-export const profile = {
+const profile = {
     title: 'Profile',
     text: `My current role is a full-stack software engineer working primarily in the front end. 
         But day to day my skills in design, hardware, 3D printing and video editing come in handy for making rapid prototypes; 
@@ -8,10 +8,12 @@ export const profile = {
         I am a maker at heart who is happiest covered head to toe in glitter, paint and LEDS. 
         I am passionate about technology and reaching out to the next generation of women in Tech, 
         I’ve written some blogs about my experiences so far that you can read here, here and here. `,
-    icon: spaceman
+    icon: spaceman,
+    isListing: false,
+    fullSize: true
 };
 
-export const experience = {
+const experience = {
     title: 'Experience',
     text: [
         {
@@ -30,9 +32,11 @@ export const experience = {
         }
     ],
     icon: rocket,
+    isListing: true,
+    fullSize: true
 };
 
-export const education = {
+const education = {
     title: 'Education',
     text: [
         {
@@ -47,4 +51,77 @@ export const education = {
         }
     ],
     icon: telescope,
+    isListing: true,
+    fullSize: true
 };
+
+export const skillsObject = {
+    title: "Development",
+    icon: twinkle,
+    skills: [
+        {
+            label: 'JavaScript',
+            value: 75
+        },
+        {
+            label: 'React',
+            value: 75
+        },
+        {
+            label: 'Angular 2+',
+            value: 60
+        },
+        {
+            label: 'ECMAScript',
+            value: 70
+        },
+        {
+            label: 'TypeScript',
+            value: 75
+        },
+        {
+            label: 'Python',
+            value: 60
+        },
+        {
+            label: 'Voice UI',
+            value: 50
+        },
+        {
+            label: 'HTML5',
+            value: 100
+        },
+        {
+            label: 'CSS/SCSS',
+            value: 80
+        },
+        {
+            label: 'Bootstrap',
+            value: 90
+        }
+    ],
+    fullSize: false
+};
+
+export const designObject = {
+    title: 'Design',
+    icon: halfmoon,
+    skills: [
+        'Sketch', 'Illustrator', 'Premiere Pro', 'Final Cut', 'Photoshop', '3D Modelling',
+        'Web Design', 'User Experience Design', 'User Interface Design', 'Voice Interface Design',
+        'Hand Lettering'
+    ],
+    fullSize: false
+};
+
+export const otherObject = {
+    title: 'Other things I know about',
+    icon: ufo,
+    skills: [
+        'Agile and Scrum Methodologies', 'Critical Thinking', 'Problem Solving', 'Excellent Writing Skills', 'Design Thinking',
+        'Raspberry Pi', 'Arduino', 'Adafruit', 'Sensor Technologies', 'IOT', '3D Printing', 'TCP/IP Networks', 'Fine Art'
+    ],
+    fullSize: false
+};
+
+export const sectionsArray = [profile, experience, education];
