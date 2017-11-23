@@ -25,12 +25,13 @@ export default class HomePage extends Component {
                   <div className="col-70">
                       {sectionsArray.map((item) =>
                         <Section
-                          key={sectionsArray[item]}
+                          key={item.title}
                           icon={item.icon}
                           title={item.title}
                           text={item.text}
                           isListing={item.isListing}
                           fullSize={item.fullSize}
+                          blog={item.blog}
                         />
                       )
                       }

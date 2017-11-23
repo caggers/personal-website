@@ -12,7 +12,7 @@ export default class DesignSection extends Component {
               <SectionHeader title={title} icon={icon} fullSize={fullSize}/>
               <ul>
                   {skills.map((item) =>
-                    <li key={skills[item]}>
+                    <li key={item}>
                         {item}
                     </li>
                   )}
@@ -25,6 +25,6 @@ export default class DesignSection extends Component {
 DesignSection.propTypes = {
     icon: PropTypes.string,
     title: PropTypes.string,
-    skills: PropTypes.object,
+    skills: PropTypes.array,
     fullSize: PropTypes.bool
 };

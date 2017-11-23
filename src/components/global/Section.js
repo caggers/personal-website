@@ -6,7 +6,8 @@ import SectionListItem from './SectionListItem';
 export default class Section extends Component {
 
     render() {
-        const {title, icon, text, isListing, fullSize} = this.props;
+        const {title, icon, text, isListing, fullSize, blog} = this.props;
+        console.log(blog);
         if(!isListing) {
             return (
               <div className="section">

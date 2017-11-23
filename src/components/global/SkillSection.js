@@ -7,15 +7,14 @@ export default class SkillSection extends Component {
 
     render() {
         const {title, icon, skills, fullSize} = this.props;
-        console.log(skills);
         return (
           <div className="section">
               <SectionHeader title={title} icon={icon} fullSize={fullSize}/>
               {skills.map((item) =>
-                <div key={skills[item]} className="row-progress">
-                    <div key={skills[item]} className="col-10" />
-                    <div key={skills[item]}>{item.label}</div>
-                    <progress key={skills[item]} value={item.value} max="100" />
+                <div key={item.label} className="row-progress">
+                    <div className="col-10" key="empty-div"/>
+                    <div key="label">{item.label}</div>
+                    <progress key="progress" value={item.value} max="100" />
                 </div>
               )}
           </div>
@@ -26,6 +25,6 @@ export default class SkillSection extends Component {
 SkillSection.propTypes = {
     icon: PropTypes.string,
     title: PropTypes.string,
-    skills: PropTypes.object,
+    skills: PropTypes.array,
     fullSize: PropTypes.bool
 };

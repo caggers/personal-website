@@ -1,5 +1,9 @@
 import { spaceman, telescope, rocket, twinkle, halfmoon, ufo } from '../images/icon/index';
 
+const blog_00 = `<a href='https://coderdojo.com/news/2017/05/30/building-a-network-to-support-female-mentors-and-ninjas/'>here</a>`;
+const blog_01 = `<a href='https://coderdojo.com/news/2017/07/01/creating-an-environment-to-support-female-ninjas/'> here </a>`;
+const blog_02 = `<a href='https://www.accenture.com/ie-en/blogs/blogs-inspiring-childlike-creativity'> here </a>`;
+
 const profile = {
     title: 'Profile',
     text: `My current role is a full-stack software engineer working primarily in the front end. 
@@ -7,10 +11,11 @@ const profile = {
         helpful for igniting the imaginations of the stakeholders and clients who visit. 
         I am a maker at heart who is happiest covered head to toe in glitter, paint and LEDS. 
         I am passionate about technology and reaching out to the next generation of women in Tech, 
-        I’ve written some blogs about my experiences so far that you can read here, here and here. `,
+        I’ve written some blogs about my experiences so far that you can read`,
     icon: spaceman,
     isListing: false,
-    fullSize: true
+    fullSize: true,
+    blog: blog_00
 };
 
 const experience = {
