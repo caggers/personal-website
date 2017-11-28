@@ -1,6 +1,0 @@
-version: '2'
-services:
-  unit_test_service:
-      container_name: ${PROJECT_NAME_KEY}-${COMPONENT_NAME}${COMPILE}
-      image: "${DOCKER_REPO_NAME}:${PROJECT_NAME_KEY}${COMPILE}-${B}"
-      command: "npm test"
