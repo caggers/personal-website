@@ -6,8 +6,7 @@ import SectionListItem from './SectionListItem';
 export default class Section extends Component {
 
     render() {
-        const {title, icon, text, isListing, fullSize, blog} = this.props;
-        console.log(blog);
+        const {title, icon, text, isListing, fullSize, blogs} = this.props;
         if(!isListing) {
             return (
               <div className="section">
@@ -16,6 +15,13 @@ export default class Section extends Component {
                       <div className="col-5"/>
                       <div className="col-95">
                           <p>{text}</p>
+                          <p className="profile-links">
+                              I am passionate about technology and reaching out to the next generation of women in Tech.
+                              I’ve written some blogs about my experiences so far which you can read
+                              <a href={blogs[0]}> here </a>,
+                              <a href={blogs[1]}> here </a>, and
+                              <a href={blogs[2]}> here </a>.
+                          </p>
                       </div>
                   </div>
               </div>
@@ -44,5 +50,6 @@ Section.propTypes = {
         PropTypes.array
     ]),
     isListing: PropTypes.bool,
-    fullSize: PropTypes.bool
+    fullSize: PropTypes.bool,
+    blogs: PropTypes.array
 };

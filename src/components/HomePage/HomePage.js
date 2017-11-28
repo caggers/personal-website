@@ -9,14 +9,22 @@ import DesignSection from "../global/DesignSection";
 
 export default class HomePage extends Component {
 
+    returnHeader = () => {
+        return (
+          <div>
+              My name is Gemma, I make things.< br/>
+              I'm a Web Dev by day <br/>
+              and a DIY electronics and wearables <br/>
+              enthusiast by night.
+          </div>
+        );
+    }
+
     render() {
         return (
           <div>
               <header className="header-text">
-                  My name is Gemma, I make things.< br/>
-                  I'm a Web Dev by day <br/>
-                  and a DIY electronics and wearables <br/>
-                  enthusiast by night.
+                  {this.returnHeader()}
               </header>
               <div className="row">
                   <div className="col-30">
@@ -31,7 +39,7 @@ export default class HomePage extends Component {
                           text={item.text}
                           isListing={item.isListing}
                           fullSize={item.fullSize}
-                          blog={item.blog}
+                          blogs={item.blogs}
                         />
                       )
                       }

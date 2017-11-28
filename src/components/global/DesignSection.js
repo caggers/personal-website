@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SectionHeader from './SectionHeader';
-import SectionListItem from './SectionListItem';
 
 export default class DesignSection extends Component {
 

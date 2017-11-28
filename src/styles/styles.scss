@@ -101,4 +101,11 @@ body {
   .list-item-heading {
     font-family: $app-secondary-bold-text;
   }
+  #{$a-tags} {
+    color: $app-dark-blue;
+    text-decoration: none;
+  }
+  #{$a-tags-hover} {
+    color: $app-purple;
+  }
 }
